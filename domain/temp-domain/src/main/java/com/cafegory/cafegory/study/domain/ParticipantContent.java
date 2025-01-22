@@ -1,0 +1,11 @@
+package com.cafegory.cafegory.study.domain;
+
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+public class ParticipantContent {
+
+    private Attendance attendance;
+}
