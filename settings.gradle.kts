@@ -2,7 +2,8 @@ rootProject.name = "cafegory"
 
 include(
     "api",
-    "db"
+    "db",
+    "domain:temp-domain"
 )
 
 pluginManagement {

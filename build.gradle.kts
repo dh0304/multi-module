@@ -23,6 +23,7 @@ allprojects {
     }
 }
 
+val lombokVersion: String by project
 subprojects {
     plugins.apply("java")
     plugins.apply("org.springframework.boot")
@@ -31,6 +32,11 @@ subprojects {
     dependencies {
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+        compileOnly("org.projectlombok:lombok:${lombokVersion}")
+        annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+        testCompileOnly("org.projectlombok:lombok:${lombokVersion}")
+        testAnnotationProcessor("org.projectlombok:lombok:${lombokVersion}")
     }
 
     tasks.named<BootJar>("bootJar") {

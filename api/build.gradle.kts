@@ -9,7 +9,8 @@ tasks.named<Jar>("jar") {
 }
 
 dependencies {
-    implementation(project(":db"))
+    implementation(project(":domain:temp-domain"))
+    compileOnly(project(":db"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
 }
