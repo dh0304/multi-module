@@ -12,7 +12,6 @@ public class Schedule {
 	private LocalDateTime startDateTime;
 	private LocalDateTime endDateTime;
 
-	//TODO 문서화, 주석 필수
 	public boolean overlaps(Schedule schedule) {
 		if (this.startDateTime.equals(schedule.endDateTime) || schedule.startDateTime.equals(this.endDateTime)) {
 			return false;

@@ -83,7 +83,6 @@ public class CafeContextPersister {
 		return this;
 	}
 
-	// TODO 도메인과 엔티티가 격리되면, build() 를 통해서 엔티티를 반환할 이유가 없다. 테스트 빌더는 DB에 저장하기 위한 핼퍼 클래스로 변한다. build() 를 private 으로 변경
 	public CafeEntity build() {
 		return CafeEntity.builder()
 			.name(this.name)

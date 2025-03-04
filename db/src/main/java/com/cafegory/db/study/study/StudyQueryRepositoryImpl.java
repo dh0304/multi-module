@@ -61,12 +61,6 @@ public class StudyQueryRepositoryImpl implements StudyQueryRepository {
 			.collect(Collectors.toList());
 	}
 
-//	@Override
-//	public SliceResponse<CafeStudySearchListResponse> findCafeStudies(CafeStudySearchListRequest request) {
-//		SliceResponse<CafeStudyEntity> response = studyQueryDslRepository.findCafeStudies(request);
-//		return response.map(CafeStudySearchListResponse::from);
-//	}
-
 	@Override
 	public SliceResponse<StudySearchListResponse> findStudies(CafeStudySearchListRequest request) {
 		return studyQueryDslRepository.findStudies(request);

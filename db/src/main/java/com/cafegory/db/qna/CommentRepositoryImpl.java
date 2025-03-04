@@ -31,7 +31,6 @@ public class CommentRepositoryImpl implements CommentRepository {
 	public CommentId saveSubComment(
 			CommentContent content, ParentCommentId parentCommentId, StudyId studyId, MemberId memberId
 	) {
-		//TODO STUDYROLE 수정 필요
 		CafeStudyCommentEntity commentEntity = commentJpaRepository.save(
 			CafeStudyCommentEntity.createSubComment(content, parentCommentId, memberId, studyId, StudyRole.MEMBER));
 

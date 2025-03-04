@@ -13,7 +13,6 @@ dependencies {
     testFixturesImplementation("io.jsonwebtoken:jjwt-api:${jjwtVersion}")
 
     implementation(project(":domain:member-domain"))
-    //TODO 예외를 CafegoryException을 터뜨릴건지 Auth 예외를 터뜨릴건지 고민해보기
     implementation(project(":domain:common-domain"))
 
     testFixturesImplementation(project(":domain:member-domain"))

@@ -19,8 +19,6 @@ public class MyPageResponse {
 	private MyInfo myInfo;
 	private List<ReviewInfo> reviewsInfo;
 
-	//TODO 함께 참여한 멤버 리스트 추가
-
 	public static MyPageResponse of(Member member, List<Review> reviews) {
 		MyPageResponse response = new MyPageResponse();
 
@@ -73,7 +71,6 @@ public class MyPageResponse {
 		private String bio;
 		private BeverageSize beverageSize;
 		private LocalDateTime createdDate;
-		//TODO 관심있는 카테고리 추가
 	}
 
 	@Getter

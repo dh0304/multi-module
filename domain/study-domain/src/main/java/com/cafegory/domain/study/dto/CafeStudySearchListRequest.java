@@ -17,8 +17,6 @@ import java.util.List;
 @Setter
 public class CafeStudySearchListRequest extends PagedRequest {
 
-//	@NotBlank
-	//TODO NotBlank 기능이 동작해야한다. 어노테이션이 아니더라도 검증은 필요
 	private String keyword;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate date;

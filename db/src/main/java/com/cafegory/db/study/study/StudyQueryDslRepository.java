@@ -53,7 +53,6 @@ public class StudyQueryDslRepository {
                 .forEach(
                         studyInfo -> {
                             studyInfo.setTags(studyTagTypeMap.get(studyInfo.getId()));
-                            //TODO getOrDeafult 메서드가 사용되면 안되고 get()이 사용되어야한다. get()을 사용하면 NullPointer예외 터진다. 카공 등록할 때 Coordinator가 StudyMember로 등록되는지 확인필요
                             studyInfo.setCurrentParticipants(currentParticipantsMap.getOrDefault(studyInfo.getId(), 0));
                         }
                 );
@@ -186,31 +185,6 @@ public class StudyQueryDslRepository {
                 .map(StudySearchListResponse.StudyInfo::getId)
                 .collect(Collectors.toList());
     }
-
-//    public SliceResponse<CafeStudyEntity> findCafeStudies(
-//            CafeStudySearchListRequest request
-//    ) {
-//        Pageable pageable = PagingUtil.of(request.getPage(), request.getSizePerPage());
-//
-//        JPAQuery<CafeStudyEntity> query = queryFactory
-//                .select(cafeStudyEntity).distinct()
-//                .from(cafeStudyEntity)
-//                .join(cafeStudyEntity.cafe, cafeEntity).fetchJoin()
-//                .where(
-//                        keywordContains(request.getKeyword())
-//                                .or(cafeStudyNameContains(request.getKeyword())),
-//                        dateEq(request.getDate()),
-//                        cafeStudyTagTypeEq(request.getCafeStudyTagType()),
-//                        hasAllCafeTagTypes(request.getCafeTagTypes()),
-//                        memberCommsEq(request.getMemberComms())
-//                )
-//                .orderBy(
-//                        getRecruitmentStatusPriority().asc(),
-//                        cafeStudyEntity.id.desc()
-//                );
-//
-//        return SliceResponse.of(PagingUtil.toSlice(query, pageable));
-//    }
 
     private NumberExpression<Integer> getRecruitmentStatusPriority() {
         return new CaseBuilder()

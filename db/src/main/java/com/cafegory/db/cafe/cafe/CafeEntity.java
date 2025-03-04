@@ -55,7 +55,6 @@ public class CafeEntity extends BaseEntity {
 	@OneToMany(mappedBy = "cafe")
 	private List<MenuEntity> menus = new ArrayList<>();
 
-	//TODO: 확인하기 - doha
 	@Builder.Default
 	@OneToMany(mappedBy = "cafe")
 	private List<CafeStudyEntity> cafeStudies = new ArrayList<>();
