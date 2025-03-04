@@ -1,9 +1,11 @@
 ## 프로젝트 의도
 
-기획 변경과 아키텍처 개선을 테스트 코드 기반 리팩터링으로 함께 진행한 [단일 모듈에서 멀티 모듈로의 전환 프로젝트](https://dh0304.github.io/posts/single-to-multi-module-(1)/)
+기획 변경과 아키텍처 개선을 테스트 코드 기반 리팩터링으로 함께 진행한 단일 모듈에서 멀티 모듈로의 전환 프로젝트
 
 ---
 ## 프로젝트 진행 과정
+
+[블로그: 단일 모듈에서 멀티 모듈 전환기](https://dh0304.github.io/posts/single-to-multi-module-(1)/)
 
 - [1차 MVP Repository](https://github.com/Cafegory/Cafegory_Backend_REST_API)
 - [단일 프로젝트 단일 모듈 Repository](https://github.com/Cafegory2/Cafegory_Backend_REST_API)
